@@ -20,12 +20,16 @@ const searchPhone = () => {
                       <h5 class="card-title">${phone.phone_name}</h5>
                       <p class="card-text">${phone.brand}</p>
                     </div>
-                    <div class="card-footer">
-                      <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
+                    <button onclick="searchById(${phone.slug})" class="card-footer">
+                      <small class="text-muted">Deatails</small>
+                    </button>
                 </div>
         `
         searchResult.appendChild(div)
         })
     }
+}
+// Search By Id
+const searchById = phoneId => {
+    console.log(phoneId);
 }
